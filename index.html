@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Display Array of Object In Table </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="create">
+        <table>
+            <tr>
+                <th>avatar</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>email</th>      
+                <th>created-at</th>
+                <th>country</th>
+            </tr>
+
+            <tr v-for="value in datas">
+                <td ><img :src="value.avatar" class="mage"/></td>
+                <td >{{ value.name }}</td>
+                <td >{{ value.phone }}</td>
+                <td >{{ value.email}}</td>
+                <td >{{ value.created_at }}</td>
+                <td >{{ value.country }}</td>     
+                
+            </tr>
+
+        </table> 
+
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
